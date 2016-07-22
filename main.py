@@ -716,11 +716,10 @@ transform_from_wgs_to_gcj(Location(Fort.Latitude, Fort.Longitude))
             "name": pokename
         }
 
-        pokemons[poke.SpawnPointId] = pokemon_obj
-
         print "Pokemon :", pokemon_obj
 
         if poke.SpawnPointId not in pokemons:
+            pokemons[poke.SpawnPointId] = pokemon_obj
             notifier.pokemon_found(pokemon_obj)
 
 def clear_stale_pokemons():
